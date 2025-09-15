@@ -49,10 +49,10 @@ generateBtn.addEventListener("click", () => {
                     <div class="header flex flex-row ml-[32px] mt-[24px]">
                         <img src="./assets/logo_dark.png" class="w-[180px] h-auto" />
                         <div
-                            class="detail-container flex flex-row bg-[#03624cf2] h-auto rounded-tl-[48px] rounded-bl-[8px] mt-[24px] ml-[64px] items-center w-full justify-between">
-                            <div class="name-container flex-1 flex-col justify-center items-center">
-                                <div class="flex flex-col w-auto justify-center items-center">
-                                    <div class="font-[Podkova] text-[32px] tracking-[0.1em] text-[#fffbdf]">
+                            class="detail-container flex flex-row bg-[#03624cf2] rounded-tl-[48px] rounded-bl-[8px] mt-[24px] ml-[64px] items-center w-full justify-between">
+                            <div class="name-container flex-1 flex-col">
+                                <div class="flex flex-col items-center gap-[-4px]">
+                                    <div class="font-[Podkova] text-[32px] tracking-[0.1em] text-[#fffbdf] mt-[-36px]">
                                         BUY, SELL AND EXCHANGE
                                     </div>
                                     <div class="font-['Playfair_Display_SC'] text-[54px] tracking-[0.1em] text-[#fffbdf]">
@@ -61,8 +61,8 @@ generateBtn.addEventListener("click", () => {
                                 </div>
                             </div>
                             <div
-                                class="amount-container flex flex-col bg-[#fffbdfcc] h-full rounded-tl-[48px] rounded-bl-[8px] min-w-[200px] justify-center items-center px-4">
-                                <div id="amount" class="font-[Donatto] text-[48px] text-[#03624cf2] tracking-[0.1em]">${carPriceInput.value}</div>
+                                class="amount-container flex flex-col bg-[#fffbdfcc] h-full rounded-tl-[48px] rounded-bl-[8px] min-w-[200px]  items-center px-4">
+                                <div id="amount" class="font-[Donatto] text-[48px] text-[#03624cf2] tracking-[0.1em] mt-[4px]">${carPriceInput.value}</div>
                                 <div id="lakhs" class="font-[Donatto] text-[24px] text-[#03624cf2]">lakhs</div>
                             </div>
                         </div>
@@ -102,7 +102,7 @@ generateBtn.addEventListener("click", () => {
             const templates = Array.from(document.querySelectorAll(".template"));
 
             templates.slice(1).forEach((template, idx) => {
-                html2canvas(template, { width: 1080, height: 1080, scale: 1 }).then(canvas => {
+                html2canvas(template, { width: 1080, height: 1080, scale: 2 }).then(canvas => {
                     const link = document.createElement("a");
                     link.download = `${carNameInput.value}-${idx + 1}.png`;
                     link.href = canvas.toDataURL();
