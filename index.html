@@ -18,11 +18,10 @@
 
     <div class="template flex flex-col">
 
-        <div class="header flex flex-row ml-[32px] mt-[24px]">
+        <div class="header flex flex-row ml-[32px] mt-[36px]">
             <img src="./assets/logo_dark.png" class="w-[180px] h-auto" />
-
             <div
-                class="detail-container flex flex-row bg-[#03624cf2] rounded-tl-[48px] rounded-bl-[8px] mt-[24px] ml-[64px] items-center w-full justify-between">
+                class="detail-container flex flex-row bg-[#03624cf2] h-full rounded-tl-[48px] rounded-bl-[8px]  ml-[64px] items-center w-full justify-between">
                 <div class="name-container flex-1 flex-col">
                     <div class="flex flex-col items-center">
                         <div class="font-[Podkova] text-[32px] tracking-[0.1em] text-[#fffbdf]">
@@ -43,7 +42,7 @@
 
         </div>
 
-        <div class="car-image mt-[48px]">
+        <div class="car-image mt-[36px]">
             <img id="car-image" src="./assets/Image.png" class="w-full h-full object-contain block" />
         </div>
         <div class="ellipse"></div>
@@ -72,6 +71,11 @@
         <input type="file" id="carImages" accept="image/*" multiple
             class="border-2 border-[#03624c] rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#03624c] mt-4 w-full" />
 
+        <!-- Car Name Font Size -->
+        <input type="number" id="carNameFontSize" placeholder="Car Name Font Size" value="54"
+            class="border-2 border-[#03624c] rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#03624c] mt-4 w-full" />
+
+
         <!-- Generate Button -->
         <button
             class="mt-4 px-6 py-2 rounded-[8px] bg-[#03624c] text-[#fffbdf] font-[Podkova] hover:bg-[#024f3c] transition-colors"
@@ -81,10 +85,10 @@
     </div>
 
     <h1 class="mt-32">Generated Templates</h2>
-    <div id="output" class="flex flex-col"></div>
+        <div id="output" class="flex flex-col"></div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script src="index.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+        <script src="index.js"></script>
 </body>
 
 </html>

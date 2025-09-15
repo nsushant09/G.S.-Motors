@@ -3,6 +3,8 @@ const carPriceInput = document.getElementById("carPrice");
 const carImagesInput = document.getElementById("carImages");
 const output = document.getElementById("output");
 const generateBtn = document.getElementById("generateBtn");
+const carNameFontSizeInput = document.getElementById("carNameFontSize");
+
 
 generateBtn.addEventListener("click", () => {
     const files = Array.from(carImagesInput.files);
@@ -46,28 +48,28 @@ generateBtn.addEventListener("click", () => {
                 template.id = `template-${index}`;
 
                 template.innerHTML = `
-                    <div class="header flex flex-row ml-[32px] mt-[24px]">
+                    <div class="header flex flex-row ml-[36px] mt-[24px]">
                         <img src="./assets/logo_dark.png" class="w-[180px] h-auto" />
                         <div
-                            class="detail-container flex flex-row bg-[#03624cf2] rounded-tl-[48px] rounded-bl-[8px] mt-[24px] ml-[64px] items-center w-full justify-between">
+                            class="detail-container flex flex-row bg-[#03624cf2] rounded-tl-[48px] rounded-bl-[8px] ml-[64px] items-center w-full justify-between">
                             <div class="name-container flex-1 flex-col">
-                                <div class="flex flex-col items-center gap-[-4px]">
-                                    <div class="font-[Podkova] text-[32px] tracking-[0.1em] text-[#fffbdf] mt-[-36px]">
+                                <div class="flex flex-col items-center  justify-center mt-[-32px]">
+                                    <div class="font-[Podkova] text-[32px] tracking-[0.1em] text-[#fffbdf]">
                                         BUY, SELL AND EXCHANGE
                                     </div>
-                                    <div class="font-['Playfair_Display_SC'] text-[54px] tracking-[0.1em] text-[#fffbdf]">
+                                    <div class="font-['Playfair_Display_SC'] text-[${carNameFontSizeInput.value}px] tracking-[0.1em] text-[#fffbdf]">
                                         ${carNameInput.value}
                                     </div>
                                 </div>
                             </div>
                             <div
-                                class="amount-container flex flex-col bg-[#fffbdfcc] h-full rounded-tl-[48px] rounded-bl-[8px] min-w-[200px]  items-center px-4">
-                                <div id="amount" class="font-[Donatto] text-[48px] text-[#03624cf2] tracking-[0.1em] mt-[4px]">${carPriceInput.value}</div>
+                                class="amount-container flex flex-col bg-[#fffbdfcc] h-full rounded-tl-[48px] rounded-bl-[8px] min-w-[200px]  items-center justify-center px-4">
+                                <div id="amount" class="font-[Donatto] text-[48px] text-[#03624cf2] tracking-[0.1em] mt-[-24px]">${carPriceInput.value}</div>
                                 <div id="lakhs" class="font-[Donatto] text-[24px] text-[#03624cf2]">lakhs</div>
                             </div>
                         </div>
                     </div>
-                    <div class="car-image mt-[48px]">
+                    <div class="car-image mt-[36px]">
                         <img id="car-image" src="${croppedDataURL}" class="w-full h-full object-cover block" />
                     </div>
                     <div class="ellipse"></div>
@@ -89,6 +91,7 @@ generateBtn.addEventListener("click", () => {
             };
         };
         reader.readAsDataURL(file);
+        carNameFontSizeInput.value = "54";
     });
 
 
