@@ -13,18 +13,10 @@
 
 <body>
 
-    <h1>Car Post Generator</h1>
-    <div class="controls">
-        <input type="text" id="carName" placeholder="Car Name" value="Hyundai Creta" />
-        <input type="text" id="carPrice" placeholder="Car Price" value="32.45 lakhs" />
-        <input type="file" id="carImages" accept="image/*" multiple />
-    </div>
+    <h2>Template Preview</h2>
 
-    <!-- Live Preview Template -->
-    <h2>Live Preview</h2>
 
-    
-    <div class="template flex flex-col" id="preview">
+    <div class="template flex flex-col">
 
         <div class="header flex flex-row ml-[32px] mt-[24px]">
             <img src="./assets/logo_dark.png" class="w-[180px] h-auto" />
@@ -53,7 +45,7 @@
         </div>
 
         <div class="car-image mt-[48px]">
-            <img id="car-image" src="./assets/Image.png" class="w-full h-full object-cover block" />
+            <img id="car-image" src="./assets/Image.png" class="w-full h-full object-contain block" />
         </div>
         <div class="ellipse"></div>
         <div class="footer flex flex-col items-center">
@@ -68,23 +60,30 @@
             </div>
         </div>
 
-        <!-- <div class="logo">
-            <img src="./assets/logo_dark.png">
-        </div>
-        <div class="price-box" id="previewPrice">32.45 lakhs</div>
-        <div class="car-name" id="previewName">Hyundai Creta</div>
-        <img class="car-image" id="previewImg" src="https://via.placeholder.com/1080x600.png?text=Upload+Car+Image" />
-        <div class="ellipse"></div>
-        <div class="footer">
-            +977 9851036706 | +977 9823579122 | +977 9843912013 <br />
-            Karkhana Chowk, Swoyambhu, Kathmandu <br />
-            www.gsmotors.com
-        </div> -->
     </div>
 
-    <!-- Generated Templates -->
-    <h2>Generated Templates</h2>
-    <div id="output"></div>
+    <h1 class="mt-32">Car Post Generator</h1>
+    <div class="controls mt-4">
+        <input type="text" id="carName" placeholder="Car Name" value="" aria-placeholder="Car Name"
+            class="border-2 border-[#03624c] rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#03624c] w-full" />
+
+        <input type="text" id="carPrice" placeholder="Car Price" value=""
+            class="border-2 border-[#03624c] rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#03624c] mt-4 w-full" />
+
+        <input type="file" id="carImages" accept="image/*" multiple
+            class="border-2 border-[#03624c] rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#03624c] mt-4 w-full" />
+
+        <!-- Generate Button -->
+        <button
+            class="mt-4 px-6 py-2 rounded-[8px] bg-[#03624c] text-[#fffbdf] font-[Podkova] hover:bg-[#024f3c] transition-colors"
+            id="generateBtn">
+            Generate
+        </button>
+    </div>
+
+    <h1 class="mt-32">Generated Templates</h2>
+    <div id="output" class="flex flex-col"></div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="index.js"></script>
 </body>
