@@ -91,12 +91,11 @@ generateBtn.addEventListener("click", () => {
             };
         };
         reader.readAsDataURL(file);
-        carNameFontSizeInput.value = "54";
     });
-
 
     // Wait for fonts to load first
     setTimeout(() => { // small delay to ensure templates are appended
+        carNameFontSizeInput.value = "54";
         const downloadBtn = document.createElement("button");
         downloadBtn.innerText = "Download All";
         downloadBtn.className = "download-btn mt-4";
