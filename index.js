@@ -75,7 +75,7 @@ generateBtn.addEventListener("click", () => {
                     <div class="ellipse"></div>
                     <div class="footer flex flex-col items-center">
                         <div id="contacts" class="font-[Podkova] text-[24px] text-[#03624c] tracking-[0.1em]">
-                            +977 9851035706 | +977 9823579122 | +977 9843912013
+                            +977 9851310685 | +977 9869101262 | +977 9843912013
                         </div>
                         <div id="address" class="font-[Podkova] text-[24px] text-[#03624c] tracking-[0.1em]">
                             Karkhana Chowk, Swoyambhu, Kathmandu
