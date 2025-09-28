@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>G.S. Motors</title>
+    <link rel="stylesheet" href="template_generator.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Podkova:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="font-[Outfit] bg-white text-[#141316]">
+
+    <!-- Header -->
+    <header class="w-full fixed top-0 left-0 bg-[#141316] z-50 shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-4 mb-4">
+            <img src="../../assets/logo_light.png" alt="GS Motors" class="h-24">
+            <nav class="hidden md:flex space-x-8 text-white">
+                <a href="#" class="hover:text-[#03624C] transition text-xl">Home</a>
+                <a href="#about" class="hover:text-[#03624C] transition text-xl">About</a>
+                <a href="#resale" class="hover:text-[#03624C] transition text-xl">Resale</a>
+                <a href="#contact" class="hover:text-[#03624C] transition text-xl">Contact</a>
+            </nav>
+            <button class="md:hidden text-white">☰</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-32 px-6">
+
+        <!-- Generator Form -->
+        <h1 class="mt-16 text-3xl font-[Podkova] font-bold ">Car Post Generator</h1>
+        <div class="controls mt-6 space-y-4 max-w-2xl">
+            <input type="text" id="carName" placeholder="Car Name"
+                class="border-2 border-[#03624c] rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#03624c] w-full" />
+
+            <input type="text" id="carPrice" placeholder="Car Price"
+                class="border-2 border-[#03624c] rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#03624c] w-full" />
+
+            <input type="file" id="carImages" accept="image/*" multiple
+                class="border-2 border-[#03624c] rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#03624c] w-full" />
+
+            <input type="number" id="carNameFontSize" placeholder="Car Name Font Size" value="54"
+                class="border-2 border-[#03624c] rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#03624c] w-full" />
+
+            <button id="generateBtn"
+                class="w-full px-6 py-3 rounded-lg bg-[#03624c] text-white font-[Podkova] hover:bg-[#024f3c] transition-colors">
+                Generate
+            </button>
+        </div>
+
+        <!-- Output Section -->
+        <h1 class="mt-16 text-3xl font-[Podkova] font-bold">Generated Templates</h1>
+        <div id="output" class="flex flex-col mt-6 space-y-6"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-black py-10 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-gray-400">
+            <p>&copy; 2025 G.S. Motors. All rights reserved.</p>
+            <div class="space-x-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white">Facebook</a>
+                <a href="#" class="hover:text-white">Instagram</a>
+                <a href="#" class="hover:text-white">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="template_generator.js"></script>
+</body>
+
+</html>

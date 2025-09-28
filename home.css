@@ -1,0 +1,45 @@
+/* Slider animation: 12s loop, each slide ~4s (hold -> quick transition -> hold -> ...) */
+  .slider-track {
+    animation: slider 12s ease-in-out infinite;
+    will-change: transform;
+  }
+
+  /* Pause on hover so users can read the testimonial */
+  .slider-track:hover { animation-play-state: paused; }
+
+  @keyframes slider {
+    /* hold slide 1 */
+    0%   { transform: translateX(0%); }
+    30%  { transform: translateX(0%); }
+
+    /* transition to slide 2 */
+    33.333% { transform: translateX(-33.333%); }
+    63.333% { transform: translateX(-33.333%); }
+
+    /* transition to slide 3 */
+    66.666% { transform: translateX(-66.666%); }
+    96.666% { transform: translateX(-66.666%); }
+
+    /* quick jump back to start to loop */
+    100% { transform: translateX(0%); }
+  }
+
+  /* Dot animation synced to same 12s cycle (each dot lights up for the same window the corresponding slide is visible) */
+  .dot { background: #6b7280; /* fallback gray (Tailwind gray-500) */ }
+  .dot { animation: dotPulse 12s linear infinite both; }
+
+  .dots span:nth-child(1) { animation-delay: 0s; }
+  .dots span:nth-child(2) { animation-delay: 4s; }
+  .dots span:nth-child(3) { animation-delay: 8s; }
+
+  @keyframes dotPulse {
+    0% { background: #03624C; }       /* active during first slide */
+    30% { background: #03624C; }
+    33.333% { background: #6b7280; } /* inactive */
+    100% { background: #6b7280; }
+  }
+
+  /* Accessibility: respect user's reduce-motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    .slider-track, .dot { animation: none !important; }
+  }
