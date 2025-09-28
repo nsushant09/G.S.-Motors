@@ -49,42 +49,43 @@ generateBtn.addEventListener("click", () => {
 
                 template.innerHTML = `
                     <div class="header flex flex-row ml-[36px] mt-[24px]">
-                        <img src="./assets/logo_dark.png" class="w-[180px] h-auto" />
+                        <img src="../../assets/logo_light.png" class="w-[180px] h-auto" />
                         <div
-                            class="detail-container flex flex-row bg-[#03624cf2] rounded-tl-[48px] rounded-bl-[8px] ml-[64px] items-center w-full justify-between">
+                            class="detail-container flex flex-row bg-[#fffbdff2] rounded-tl-[48px] rounded-bl-[8px] ml-[64px] items-center w-full justify-between">
                             <div class="name-container flex-1 flex-col">
                                 <div class="flex flex-col items-center  justify-center mt-[-32px]">
-                                    <div class="font-[Podkova] text-[32px] tracking-[0.1em] text-[#fffbdf]">
+                                    <div class="font-[Podkova] text-[32px] tracking-[0.1em] text-[#03624c]">
                                         BUY, SELL AND EXCHANGE
                                     </div>
-                                    <div class="font-['Playfair_Display_SC'] text-[${carNameFontSizeInput.value}px] tracking-[0.1em] text-[#fffbdf]">
+                                    <div class="font-['Playfair_Display_SC'] text-[${carNameFontSizeInput.value}px] tracking-[0.1em] text-[#03624c] font-semibold">
                                         ${carNameInput.value}
                                     </div>
                                 </div>
                             </div>
                             <div
-                                class="amount-container flex flex-col bg-[#fffbdfcc] h-full rounded-tl-[48px] rounded-bl-[8px] min-w-[200px]  items-center justify-center px-4">
-                                <div id="amount" class="font-[Donatto] text-[48px] text-[#03624cf2] tracking-[0.1em] mt-[-24px]">${carPriceInput.value}</div>
-                                <div id="lakhs" class="font-[Donatto] text-[24px] text-[#03624cf2]">lakhs</div>
+                                class="amount-container flex flex-col bg-[#03624ce6] h-full rounded-tl-[48px] rounded-bl-[8px] min-w-[200px]  items-center justify-center px-4">
+                                <div id="amount" class="font-[Donatto] text-[48px] text-[#fffbdff2] tracking-[0.1em] mt-[-24px]">${carPriceInput.value}</div>
+                                <div id="lakhs" class="font-[Donatto] text-[24px] text-[#fffbdff2]">lakhs</div>
                             </div>
                         </div>
                     </div>
                     <div class="car-image mt-[36px]">
-                        <img id="car-image" src="${croppedDataURL}" class="w-full h-full object-cover block" />
+                        <img id="car-image" src="${croppedDataURL}" class="w-full h-full object-cover block opacity-90" />
                     </div>
                     <div class="ellipse"></div>
                     <div class="footer flex flex-col items-center">
-                        <div id="contacts" class="font-[Podkova] text-[24px] text-[#03624c] tracking-[0.1em]">
+                        <div id="contacts" class="font-[Podkova] text-[24px] text-[#fffbdf] tracking-[0.1em]">
                             +977 9851310685 | +977 9869101262 | +977 9843912013
                         </div>
-                        <div id="address" class="font-[Podkova] text-[24px] text-[#03624c] tracking-[0.1em]">
+                        <div id="address" class="font-[Podkova] text-[24px] text-[#fffbdf] tracking-[0.1em]">
                             Karkhana Chowk, Swoyambhu, Kathmandu
                         </div>
-                        <div id="contacts" class="font-[Podkova] text-[24px] text-[#03624c] tracking-[0.1em]">
+                        <div id="contacts" class="font-[Podkova] text-[24px] text-[#fffbdf] tracking-[0.1em]">
                             www.gsmotors.com
                         </div>
                     </div>
                 `;
+
 
                 container.appendChild(template);
                 output.appendChild(container);

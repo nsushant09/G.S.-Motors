@@ -2,93 +2,205 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>G.S. Motors</title>
-    <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Donatto&family=Playfair+Display+SC&family=Podkova&display=swap"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GS Motors</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Podkova:wght@600;700&display=swap"
         rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Podkova', serif;
+        }
+    </style>
 </head>
 
-<body>
+<body class="bg-[#141316] text-white">
 
-    <h2>Template Preview</h2>
+    <!-- Navbar -->
+    <header class="w-full fixed top-0 left-0 bg-[#141316] z-50 shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-4 mb-4">
+            <img src="./assets/logo_light.png" alt="GS Motors" class="h-24">
+            <nav class="hidden md:flex space-x-8 text-white">
+                <a href="#" class="hover:text-[#03624C] transition text-xl">Home</a>
+                <a href="#about" class="hover:text-[#03624C] transition text-xl">About</a>
+                <a href="#resale" class="hover:text-[#03624C] transition text-xl">Resale</a>
+                <a href="#contact" class="hover:text-[#03624C] transition text-xl">Contact</a>
+            </nav>
+            <button class="md:hidden text-white">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 md:pt-40 px-6 min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+            <div>
+                <h1 class="text-5xl md:text-7xl font-light leading-tight">Drive Home Your Dream Car</h1>
+                <p class="mt-6 text-xl text-gray-300">
+                    Discover exceptional vehicles with tailored financing solutions and heartfelt testimonials at G.S.
+                    Motors, your gateway to dream driving.
+                </p>
+                <button
+                    class="mt-6 bg-[#03624C] hover:bg-[#024534] text-white text-lg px-6 py-3 rounded-lg shadow-lg transition">
+                    Explore Financing Options
+                </button>
+            </div>
+            <div class="flex justify-center">
+                <img src="./assets/home_image_1.jpg" alt="Car Key" class="rounded-xl shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="bg-white text-[#141316] py-20 px-6">
+        <div class="max-w-5xl mx-auto text-center">
+            <p class="text-lg leading-relaxed">
+                G.S. Motors stands as a premier automotive dealership in Kathmandu, offering an exceptional range of
+                vehicles and seamless financing solutions tailored to every customer.
+                With glowing testimonials attesting to our commitment to excellence, we provide an unparalleled
+                car-buying experience that combines quality, credibility, and convenience.
+            </p>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-gray-100 py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+
+            <!-- Taller portrait-style image -->
+            <img src="./assets/home_image_2.jpg" alt="Happy Customers"
+                class="rounded-xl shadow-md object-cover w-full h-[600px] md:h-[750px]">
+
+            <div>
+                <h2 class="text-5xl md:text-7xl font-light text-[#141316]">Drive Your Dream Today</h2>
+                <p class="mt-6 text-gray-700 text-xl">
+                    At G.S. Motors, we make owning your dream car a reality with flexible financing options and genuine
+                    customer testimonials. Explore our extensive inventory online and find the perfect vehicle that fits
+                    your lifestyle and budget.
+                </p>
+                <button
+                    class="mt-8 bg-[#03624C] hover:bg-[#024534] text-white px-8 py-4 text-lg rounded-lg shadow-lg transition">
+                    Contact
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="bg-white py-20 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-5xl font-light text-[#141316]">Secure Auto Loans for Every Budget</h2>
+            <div class="mt-10 grid md:grid-cols-3 gap-8">
+
+                <!-- Feature 1 -->
+                <div class="p-6 border rounded-xl shadow-sm">
+                    <img src="./assets/car_icon.png" alt="Icon" class="mx-auto h-24 w-24 mb-4"
+                        style="filter: invert(26%) sepia(90%) saturate(700%) hue-rotate(120deg) brightness(90%) contrast(90%);">
+                    <h3 class="text-2xl font-light text-[#141316]">Diverse Range of Vehicles</h3>
+                    <p class="mt-2 text-gray-700">Explore our wide selection of new and used cars to find the perfect
+                        vehicle that suits your style and needs.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-6 border rounded-xl shadow-sm">
+                    <img src="./assets/cash_icon.png" alt="Icon" class="mx-auto h-24 w-24 mb-4"
+                        style="filter: invert(26%) sepia(90%) saturate(700%) hue-rotate(120deg) brightness(90%) contrast(90%);">
+                    <h3 class="text-2xl font-light text-[#141316]">Flexible Financing Options</h3>
+                    <p class="mt-2 text-gray-700">Our tailored financing solutions make it easy for you to drive home
+                        your dream car with affordable payment plans.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-6 border rounded-xl shadow-sm">
+                    <img src="./assets/testimonial_icon.png" alt="Icon" class="mx-auto h-24 w-24 mb-4"
+                        style="filter: invert(26%) sepia(90%) saturate(700%) hue-rotate(120deg) brightness(90%) contrast(90%);">
+                    <h3 class="text-2xl font-light text-[#141316]">Customer Testimonials</h3>
+                    <p class="mt-2 text-gray-700">Hear from satisfied customers about their experiences with us,
+                        ensuring confidence in making your next purchase.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
 
-    <div class="template flex flex-col">
+    <!-- Testimonials — Auto-sliding CSS-only carousel -->
+    <section class="bg-[#141316] py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center relative">
+            <h2 class="text-3xl font-bold text-white mb-10">Hear From Our Satisfied Clients</h2>
 
-        <div class="header flex flex-row ml-[32px] mt-[36px]">
-            <img src="./assets/logo_dark.png" class="w-[180px] h-auto" />
-            <div
-                class="detail-container flex flex-row bg-[#03624cf2] h-full rounded-tl-[48px] rounded-bl-[8px]  ml-[64px] items-center w-full justify-between">
-                <div class="name-container flex-1 flex-col">
-                    <div class="flex flex-col items-center">
-                        <div class="font-[Podkova] text-[32px] tracking-[0.1em] text-[#fffbdf]">
-                            BUY, SELL AND EXCHANGE
-                        </div>
-                        <div class="font-['Playfair_Display_SC'] text-[54px] tracking-[0.1em] text-[#fffbdf]">
-                            Hyundai Creta
-                        </div>
+            <!-- overflow wrapper -->
+            <div class="w-full overflow-hidden">
+                <!-- slider track: 3 slides horizontally -->
+                <div class="slider-track flex w-[300%]">
+                    <!-- Slide 1 -->
+                    <div class="w-full flex-shrink-0 px-6 py-6">
+                        <p class="italic text-gray-300 text-lg">
+                            "G.S. Motors made my car buying experience effortless. Their website is user-friendly and
+                            the
+                            financing options are excellent. I felt valued as a customer and am thrilled with my new
+                            car."
+                        </p>
+                        <p class="mt-4 text-[#03624C] font-semibold">– Yogesh Bhatta</p>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="w-full flex-shrink-0 px-6 py-6">
+                        <p class="italic text-gray-300 text-lg">
+                            "Excellent service and great collection of cars. Financing process was smooth and
+                            transparent.
+                            Highly recommend!"
+                        </p>
+                        <p class="mt-4 text-[#03624C] font-semibold">– Suman Shrestha</p>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="w-full flex-shrink-0 px-6 py-6">
+                        <p class="italic text-gray-300 text-lg">
+                            "Professional team and genuine vehicles. They guided me at every step. Couldn’t have asked
+                            for a
+                            better experience."
+                        </p>
+                        <p class="mt-4 text-[#03624C] font-semibold">– Anisha Karki</p>
                     </div>
                 </div>
-
-                <div
-                    class="amount-container flex flex-col bg-[#fffbdfcc] h-full rounded-tl-[48px] rounded-bl-[8px] min-w-[200px] items-center justify-center px-4 ">
-                    <div id="amount" class="font-[Donatto] text-[48px] text-[#03624cf2] tracking-[0.1em]">32.45</div>
-                    <div id="lakhs" class="font-[Donatto] text-[24px] text-[#03624cf2]">lakhs</div>
-                </div>
             </div>
 
-        </div>
-
-        <div class="car-image mt-[36px]">
-            <img id="car-image" src="./assets/Image.png" class="w-full h-full object-contain block" />
-        </div>
-        <div class="ellipse"></div>
-        <div class="footer flex flex-col items-center">
-            <div id="contacts" class="font-[Podkova] text-[24px] text-[#03624c] tracking-[0.1em]">
-                +977 9851035706 | +977 9823579122 | +977 9843912013
-            </div>
-            <div id="address" class="font-[Podkova] text-[24px] text-[#03624c] tracking-[0.1em]">
-                Karkhana Chowk, Swoyambhu, Kathmandu
-            </div>
-            <div id="contacts" class="font-[Podkova] text-[24px] text-[#03624c] tracking-[0.1em]">
-                www.gsmotors.com
+            <!-- Dots (animated to follow the same timing as the slider) -->
+            <div class="dots flex justify-center space-x-3 mt-10" aria-hidden="true">
+                <span class="dot w-3 h-3 rounded-full inline-block"></span>
+                <span class="dot w-3 h-3 rounded-full inline-block"></span>
+                <span class="dot w-3 h-3 rounded-full inline-block"></span>
             </div>
         </div>
-
-    </div>
-
-    <h1 class="mt-32">Car Post Generator</h1>
-    <div class="controls mt-4">
-        <input type="text" id="carName" placeholder="Car Name" value="" aria-placeholder="Car Name"
-            class="border-2 border-[#03624c] rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#03624c] w-full" />
-
-        <input type="text" id="carPrice" placeholder="Car Price" value=""
-            class="border-2 border-[#03624c] rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#03624c] mt-4 w-full" />
-
-        <input type="file" id="carImages" accept="image/*" multiple
-            class="border-2 border-[#03624c] rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#03624c] mt-4 w-full" />
-
-        <!-- Car Name Font Size -->
-        <input type="number" id="carNameFontSize" placeholder="Car Name Font Size" value="54"
-            class="border-2 border-[#03624c] rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#03624c] mt-4 w-full" />
+    </section>
 
 
-        <!-- Generate Button -->
-        <button
-            class="mt-4 px-6 py-2 rounded-[8px] bg-[#03624c] text-[#fffbdf] font-[Podkova] hover:bg-[#024f3c] transition-colors"
-            id="generateBtn">
-            Generate
-        </button>
-    </div>
 
-    <h1 class="mt-32">Generated Templates</h2>
-        <div id="output" class="flex flex-col"></div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-        <script src="index.js"></script>
+    <!-- Footer -->
+    <footer id="contact" class="bg-black py-10 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-gray-400">
+            <p>&copy; 2025 G.S. Motors. All rights reserved.</p>
+            <div class="space-x-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white">Facebook</a>
+                <a href="#" class="hover:text-white">Instagram</a>
+                <a href="#" class="hover:text-white">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 
 </html>
