@@ -1,0 +1,6 @@
+{
+  "name": "gsmotors",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GS Motors — monorepo root for Vercel deployment (client + server as serverless API)."
+}
