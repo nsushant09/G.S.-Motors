@@ -110,7 +110,7 @@ export function Home() {
         <div className="absolute bottom-8 left-6 z-10 flex gap-6 md:bottom-12 md:left-10 md:gap-10">
           <Odometer
             value={BUSINESS.carsSold}
-            format={(n) => `${formatNumber(n)} cars sold`}
+            format={(n) => `${formatNumber(n)}+ cars sold`}
             className="text-sm text-cream/80 md:text-base"
           />
           <Odometer

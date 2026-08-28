@@ -29,7 +29,11 @@ export function About() {
               <p className="mt-1 font-mono text-xs text-slate/60">years in business</p>
             </div>
             <div>
-              <Odometer value={BUSINESS.carsSold} format={formatNumber} className="font-display text-3xl text-forest" />
+              <Odometer
+                value={BUSINESS.carsSold}
+                format={(n) => `${formatNumber(n)}+`}
+                className="font-display text-3xl text-forest"
+              />
               <p className="mt-1 font-mono text-xs text-slate/60">cars sold</p>
             </div>
             <div>

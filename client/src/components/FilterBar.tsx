@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState, type SelectHTMLAttributes } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { SlidersHorizontal, X } from 'lucide-react';
+import { ChevronDown, SlidersHorizontal, X } from 'lucide-react';
 import { BODY_TYPES, FUEL_TYPES, MAKES, SORT_OPTIONS, TRANSMISSIONS } from '../lib/constants';
 import type { CarsQueryParams } from '../lib/api';
 
@@ -13,11 +13,24 @@ interface FilterBarProps {
 const selectClass =
   'rounded border border-moss/25 bg-bone px-3 py-2 font-mono text-xs text-slate focus:border-moss';
 
+function Select({ className, children, ...props }: SelectHTMLAttributes<HTMLSelectElement>) {
+  return (
+    <div className="relative">
+      <select {...props} className={`${selectClass} appearance-none pr-8 ${className ?? ''}`}>
+        {children}
+      </select>
+      <ChevronDown
+        size={14}
+        className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-slate/50"
+      />
+    </div>
+  );
+}
+
 function Fields({ filters, onChange }: { filters: CarsQueryParams; onChange: FilterBarProps['onChange'] }) {
   return (
     <>
-      <select
-        className={selectClass}
+      <Select
         value={filters.make ?? ''}
         onChange={(e) => onChange({ make: e.target.value || undefined })}
         aria-label="Make"
@@ -28,10 +41,9 @@ function Fields({ filters, onChange }: { filters: CarsQueryParams; onChange: Fil
             {m}
           </option>
         ))}
-      </select>
+      </Select>
 
-      <select
-        className={selectClass}
+      <Select
         value={filters.bodyType ?? ''}
         onChange={(e) => onChange({ bodyType: e.target.value || undefined })}
         aria-label="Body type"
@@ -42,10 +54,9 @@ function Fields({ filters, onChange }: { filters: CarsQueryParams; onChange: Fil
             {b}
           </option>
         ))}
-      </select>
+      </Select>
 
-      <select
-        className={selectClass}
+      <Select
         value={filters.fuel ?? ''}
         onChange={(e) => onChange({ fuel: e.target.value || undefined })}
         aria-label="Fuel"
@@ -56,10 +67,9 @@ function Fields({ filters, onChange }: { filters: CarsQueryParams; onChange: Fil
             {f}
           </option>
         ))}
-      </select>
+      </Select>
 
-      <select
-        className={selectClass}
+      <Select
         value={filters.transmission ?? ''}
         onChange={(e) => onChange({ transmission: e.target.value || undefined })}
         aria-label="Transmission"
@@ -70,7 +80,7 @@ function Fields({ filters, onChange }: { filters: CarsQueryParams; onChange: Fil
             {t}
           </option>
         ))}
-      </select>
+      </Select>
 
       <input
         type="number"
@@ -91,8 +101,7 @@ function Fields({ filters, onChange }: { filters: CarsQueryParams; onChange: Fil
         aria-label="Maximum price"
       />
 
-      <select
-        className={selectClass}
+      <Select
         value={filters.sort ?? 'newest'}
         onChange={(e) => onChange({ sort: e.target.value as CarsQueryParams['sort'] })}
         aria-label="Sort"
@@ -102,7 +111,7 @@ function Fields({ filters, onChange }: { filters: CarsQueryParams; onChange: Fil
             {s.label}
           </option>
         ))}
-      </select>
+      </Select>
     </>
   );
 }
